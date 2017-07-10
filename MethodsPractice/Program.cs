@@ -17,8 +17,18 @@ namespace MethodsPractice
             //This meand that a method will never be created inside another method or member of the class 
             //However methods are frequently called withing another method or class
 
-            int answer = Add(5, 7);
-            Console.WriteLine(answer);
+            //int answer = Add(5, 7);
+            //Console.WriteLine(answer);
+
+            //RobotWarning("Will Robinson");
+            //Useless();
+
+            string mybirthMonth = "September";
+            string myFriendBirthMonth = "December";
+            string myVehicle = Vehicle(mybirthMonth);
+            string myFriendVehicle = Vehicle(myFriendBirthMonth);
+
+            Console.WriteLine("My future vehicle is {0} and Jordan's future vehicle is {1}.", myVehicle, myFriendVehicle);
 
         }
 
@@ -37,5 +47,30 @@ namespace MethodsPractice
         }
         //If you have a method that does not have a return value, you can use keyword void
         //When we have a void return type, we don't need to use the keyword return
+
+        public static void RobotWarning(string name)
+        {
+            Console.WriteLine("Danger, " + name + "!!");
+        }
+
+        public static void Useless()
+        {
+            Console.WriteLine("Blah blah blah");
+        }
+
+        public static string Vehicle(string birthMonth)
+        {
+            string vehicleFortune;
+            if (birthMonth.ToUpper() == "SEPTEMBER" || birthMonth.ToUpper() == "OCTOBER")
+            {
+                vehicleFortune = "Hoverboard";
+
+            }
+            else
+            {
+                vehicleFortune = "SUV";
+            }
+            return vehicleFortune;
+        }
     }
 }
