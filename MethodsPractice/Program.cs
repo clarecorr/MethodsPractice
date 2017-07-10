@@ -41,10 +41,23 @@ namespace MethodsPractice
             //int age = int.Parse(Console.ReadLine());
             //RetirementCalculator(age);
 
-            double hoursWorked = 42.3d;
-            double hourlyWage = 12.50d;
+            //double hoursWorked = 42.3d;
+            //double hourlyWage = 12.50d;
 
-            Console.WriteLine("Your monthly wage is " + WageCalculator(hoursWorked, hourlyWage));
+            //Console.WriteLine("Your monthly wage is " + WageCalculator(hoursWorked, hourlyWage));
+
+
+            //Console.WriteLine("How many total projects do you need to complete?");
+            //int totalProjects = int.Parse(Console.ReadLine());
+            //Console.WriteLine("How many projects have you completed?");
+            //int projectsCompleted = int.Parse(Console.ReadLine());
+            //double percentCompleted = Math.Round(Percentage(projectsCompleted, totalProjects),2);
+            //Console.WriteLine("You have completed {0}% of the total projects.", percentCompleted);
+
+            int heightOfRectA = 10;
+            int widthOfRectA = 12;
+            double areaOfRectA = AreaOfRect(heightOfRectA, widthOfRectA);
+            Console.WriteLine(areaOfRectA);
 
             
 
@@ -119,5 +132,26 @@ namespace MethodsPractice
             return monthlyWage;
         }
     
+
+        //create two methods of your choosing. At least one of the methods should have a non-void return type
+        //both of the methods should take at least one parameter
+        //remember when naming your method it should represent what your method does
+        //you method should only aim to accomplish one thing
+
+        public static double Percentage(double part, double whole)
+        {
+            double percentage = (part / whole) * 100;
+            return percentage;
+
+        }
+
+        public static double AreaOfRect(double height, double width)
+        {
+            double area = height * width;
+            return area;
+        }
+   
+
+
     }
 }
